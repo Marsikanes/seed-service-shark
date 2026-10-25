@@ -1,4 +1,24 @@
-.venv
 .env
+.env.*
+!.env.example
 .git
-__pycashe__
+.gitignore
+.venv
+venv
+env
+__pycache__
+*.py[cod]
+*.egg-info
+.pytest_cache
+.ruff_cache
+.mypy_cache
+
+# --- docker кароч чтоб лишнее не бралось ---
+Dockerfile
+.dockerignore
+compose.yaml
+docker-compose.yaml
+
+.idea
+.vscode
+.DS_Store
