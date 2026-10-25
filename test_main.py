@@ -1,4 +1,5 @@
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
+
 from fastapi.testclient import TestClient
 from main import app
 
@@ -9,6 +10,7 @@ def test_health(mock_connect):
     response = client.get("/health")
     assert response.status_code == 200
     assert response.json() == {"status": "ok"}
+
 
 @patch("main.connect")
 def test_index(mock_connect):
